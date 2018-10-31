@@ -1,0 +1,15 @@
+{
+  "name": "bark-finder",
+  "version": "1.0.0",
+  "description": "dog match adoption finder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Project-2"
+  },
+  "author": "Doug,Karina,Cassie,Jamie",
+  "license": "ISC"
+}
