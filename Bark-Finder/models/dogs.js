@@ -1,5 +1,9 @@
 module.export = function (sequelize, DataTypes) {
     var Dogs = sequelize.define("Dogs", {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true
+        },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
