@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Basic" rel="stylesheet">
 
 </head>
 
@@ -84,41 +85,6 @@
             </div>
         </div>
     </div>
-    <!-- Signup Modal -->
-    <div class="modal fade" id="myModalSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Please signup to take the quiz</h4>
-                </div>
-                <div class="modal-body row">
-                    <div class="col-md-6 text">
-                        <form class="signup">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="email-input" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="password-input" placeholder="Password">
-                            </div>
-                            <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                <span class="sr-only">Error:</span> <span class="msg"></span>
-                            </div>
-                            <button type="submit" class="btn btn-default">Sign Up</button>
-                        </form>
-                    </div>
-                    <div class="col-md-6 image">
-                        <img class="modal-image w-100" src="./assets/images/dalmation.png" alt="">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-next">Sign Up</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Login Modal -->
     <div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -128,21 +94,19 @@
                     <h4 class="modal-title" id="myModalLabel">Please login to take the quiz</h4>
                 </div>
                 <div class="modal-body row">
-                    <div class="col-md-6 text">
-                        <form class="login">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="email-input" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="password-input" placeholder="Password">
-                            </div>
-                            <!-- <button type="submit" class="btn btn-default">Login</button> -->
-                        </form>
+                    <div class="col-md-6 login">
+                        <label for="uname"><b>Username:</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <br>
+                        <label for="psw"><b>Password:</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <br>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
                     </div>
                     <div class="col-md-6 image">
-                        <img class="modal-image w-100" src="./assets/images/dalmation.png" alt="">
+                        <img class="modal-image w-100" src="./assets/images/bernese-puppy.png" alt="">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -152,56 +116,40 @@
         </div>
     </div>
 
-    <!-- WELCOME MEMBER MODAL -->
-    <div class="modal fade" id="myModalMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Please login to take the quiz</h4>
-                </div>
-                <div class="modal-body row">
-                    <div class="col-md-6 text">
-                        <h2>Welcome <span class="member-name"></span></h2>
-                    </div>
-                    <div class="col-md-6 image">
-                        <img class="modal-image w-100" src="./assets/images/dalmation.png" alt="">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-next">Login</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Q1 Modal -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Question One</h4>
+                    <h4 class="modal-title" id="myModalLabel">Question 1/10</h4>
                 </div>
-                <div class="modal-body">
-                    <p>Do you prefer male or female?</p>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Good with other dogs?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (Friends with all)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 (Slow intros or particular dogs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (Only dog)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/gd-standing.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-next">Next</button>
@@ -215,29 +163,34 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Question Two</h4>
+                    <h4 class="modal-title" id="myModalLabel">Question 2/10</h4>
                 </div>
-                <div class="modal-body">
-                    <p>Do you prefer male or female?</p>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Good with cats?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (Cat tested and approved)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 (Prey drive, needs to be tested still)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (Absolutely not)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/scot-deerhound.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -252,28 +205,34 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Question Three</h4>
+                    <h4 class="modal-title" id="myModalLabel">Question 3/10</h4>
                 </div>
-                <div class="modal-body">
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Exercise needs?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (Very little)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 (Walks twice a day)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (Lots)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/bernese-puppy.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -288,28 +247,34 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel"> Question Four</h4>
+                    <h4 class="modal-title" id="myModalLabel"> Question 4/10</h4>
                 </div>
-                <div class="modal-body">
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Special needs?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (No special needs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 (Special diet or pills okay)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (Severe medical or mental issues okay)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/bernese-puppy.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -324,28 +289,34 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Question Five</h4>
+                    <h4 class="modal-title" id="myModalLabel">Question 5/10</h4>
                 </div>
-                <div class="modal-body">
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">What age range do you prefer?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (less than 1 year old)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2 (1-3 years old)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 (4-6 years old)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4 (7-9 years old)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (Senior 10+)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/bernese-puppy.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -360,29 +331,34 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Question Six</h4>
+                    <h4 class="modal-title" id="myModalLabel">Question 6/10</h4>
                 </div>
-                <div class="modal-body">
-                    <p>Do you prefer male or female?</p>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Good with children?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (Loves kids)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 (Older kids or slow intros)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (No kids)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/bernese-puppy.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -397,29 +373,34 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Question Seven</h4>
+                    <h4 class="modal-title" id="myModalLabel">Question 7/10</h4>
                 </div>
-                <div class="modal-body">
-                    <p>Do you prefer male or female?</p>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Size by ideal weight?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (Under 100lbs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2 (100-130lbs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 (135-165lbs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4 (170-200lbs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (Over 200lbs)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/scottish-deerhound-face.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -434,29 +415,34 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Question Eight</h4>
+                    <h4 class="modal-title" id="myModalLabel">Question 8/10</h4>
                 </div>
-                <div class="modal-body">
-                    <p>Do you prefer male or female?</p>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Length/Quantity of fur?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (Short, thin fur)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (Lots of long fur)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/bernese-puppy.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -471,29 +457,34 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Question Nine</h4>
+                    <h4 class="modal-title" id="myModalLabel">Question 9/10</h4>
                 </div>
-                <div class="modal-body">
-                    <p>Do you prefer male or female?</p>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Food motivated?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (Doesn't care)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 (Average motivation)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (Lives for food or treats)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/bernese-puppy.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -508,29 +499,34 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Question Ten</h4>
+                    <h4 class="modal-title" id="myModalLabel">Question 10/10</h4>
                 </div>
-                <div class="modal-body">
-                    <p>Do you prefer male or female?</p>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                    </label>
-                    <br>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                    </label>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Protective?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 (Doesn't protect anything)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 (Protects some things, food or toys)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5 (Very possessive/protective of attention, food, toys)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/bernese-puppy.png" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -547,7 +543,7 @@
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Meet Your New Best Friend!</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body row">
                 </div>
             </div>
         </div>

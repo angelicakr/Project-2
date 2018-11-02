@@ -50,13 +50,21 @@ input {
     margin-top: 20px;
 }
 
-.col-md-6.text {
+.col-md-6.login {
     text-align: center;
 }
 
-.modal-image{
-    max-height: 250px;
+/* Modal Questions */
+.modal-q {
+    font-size: 2em;
+    font-family: 'Basic', sans-serif;
 }
+
+.radio-inline {
+    font-size: 1.1em;
+    font-family: 'Basic', sans-serif;
+}
+
 /* Modal Buttons */
 .btn-next {
     cursor: pointer;
