@@ -84,433 +84,479 @@
             </div>
         </div>
     </div>
-
-            <!-- Login Modal -->
-            <div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Please login to take the quiz</h4>
-                        </div>
-                        <div class="modal-body row">
-                            <div class="col-md-6 text">
-                                <label for="uname"><b>Username:</b></label>
-                                <input type="text" placeholder="Enter Username" name="uname" required>
-                                <br>
-                                <label for="psw"><b>Password:</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
-                                <br>
-                                <label>
-                                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                                </label>
+    <!-- Signup Modal -->
+    <div class="modal fade" id="myModalSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Please signup to take the quiz</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 text">
+                        <form class="signup">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="email-input" placeholder="Email">
                             </div>
-                            <div class="col-md-6 image">
-                                <img class="modal-image w-100" src="./assets/images/dalmation.png" alt="">
-                            </div>    
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-next">Login</button>
-                        </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="password-input" placeholder="Password">
+                            </div>
+                            <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                <span class="sr-only">Error:</span> <span class="msg"></span>
+                            </div>
+                            <button type="submit" class="btn btn-default">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/dalmation.png" alt="">
                     </div>
                 </div>
-            </div>
-
-
-            <!-- Q1 Modal -->
-            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Question One</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Do you prefer male or female?</p>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-next">Next</button>
-                        </div>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Sign Up</button>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Q2 Modal -->
-            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Question Two</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Do you prefer male or female?</p>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-prev">Prev</button>
-                            <button type="button" class="btn btn-default btn-next">Next</button>
-                        </div>
+    <!-- Login Modal -->
+    <div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Please login to take the quiz</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 text">
+                        <form class="login">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="email-input" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="password-input" placeholder="Password">
+                            </div>
+                            <!-- <button type="submit" class="btn btn-default">Login</button> -->
+                        </form>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/dalmation.png" alt="">
                     </div>
                 </div>
-            </div>
-
-            <!-- Q3 Modal -->
-            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Question Three</h4>
-                        </div>
-                        <div class="modal-body">
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-prev">Prev</button>
-                            <button type="button" class="btn btn-default btn-next">Next</button>
-                        </div>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Login</button>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Q4 Modal -->
-            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel"> Question Four</h4>
-                        </div>
-                        <div class="modal-body">
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-prev">Prev</button>
-                            <button type="button" class="btn btn-default btn-next">Next</button>
-                        </div>
+    <!-- WELCOME MEMBER MODAL -->
+    <div class="modal fade" id="myModalMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Please login to take the quiz</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 text">
+                        <h2>Welcome <span class="member-name"></span></h2>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="./assets/images/dalmation.png" alt="">
                     </div>
                 </div>
-            </div>
-
-            <!-- Q5 Modal -->
-            <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Question Five</h4>
-                        </div>
-                        <div class="modal-body">
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-prev">Prev</button>
-                            <button type="button" class="btn btn-default btn-next">Next</button>
-                        </div>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Login</button>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Q6 Modal -->
-            <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Question Six</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Do you prefer male or female?</p>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-prev">Prev</button>
-                            <button type="button" class="btn btn-default btn-next">Next</button>
-                        </div>
-                    </div>
+    <!-- Q1 Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question One</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you prefer male or female?</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Q7 Modal -->
-            <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Question Seven</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Do you prefer male or female?</p>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-prev">Prev</button>
-                            <button type="button" class="btn btn-default btn-next">Next</button>
-                        </div>
-                    </div>
+    <!-- Q2 Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question Two</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you prefer male or female?</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                    <button type="button" class="btn btn-default btn-next">Next</button>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Q8 Modal -->
-            <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Question Eight</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Do you prefer male or female?</p>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-prev">Prev</button>
-                            <button type="button" class="btn btn-default btn-next">Next</button>
-                        </div>
-                    </div>
+    <!-- Q3 Modal -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question Three</h4>
+                </div>
+                <div class="modal-body">
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                    <button type="button" class="btn btn-default btn-next">Next</button>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Q9 Modal -->
-            <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Question Nine</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Do you prefer male or female?</p>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-prev">Prev</button>
-                            <button type="button" class="btn btn-default btn-next">Next</button>
-                        </div>
-                    </div>
+    <!-- Q4 Modal -->
+    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel"> Question Four</h4>
+                </div>
+                <div class="modal-body">
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                    <button type="button" class="btn btn-default btn-next">Next</button>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Q10 Modal -->
-            <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Question Ten</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Do you prefer male or female?</p>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
-                            </label>
-                            <br>
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
-                            </label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-prev">Prev</button>
-                            <button type="button" class="btn btn-default btn-next">Submit</button>
-                        </div>
-                    </div>
+    <!-- Q5 Modal -->
+    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question Five</h4>
+                </div>
+                <div class="modal-body">
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                    <button type="button" class="btn btn-default btn-next">Next</button>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Results Modal -->
-            <div class="modal fade" id="myModalResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Meet Your New Best Friend!</h4>
-                        </div>
-                        <div class="modal-body">
-                        </div>
-                    </div>
+    <!-- Q6 Modal -->
+    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question Six</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you prefer male or female?</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                    <button type="button" class="btn btn-default btn-next">Next</button>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Footer -->
-            <nav class="navbar fixed-bottom navbar-dark">
-                <a class="navbar-brand">&copy Bark Finder 2018</a>
-            </nav>
+    <!-- Q7 Modal -->
+    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question Seven</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you prefer male or female?</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q8 Modal -->
+    <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question Eight</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you prefer male or female?</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q9 Modal -->
+    <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question Nine</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you prefer male or female?</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q10 Modal -->
+    <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question Ten</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you prefer male or female?</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 4
+                    </label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 5
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-prev">Prev</button>
+                    <button type="button" class="btn btn-default btn-next">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div class="modal fade" id="myModalResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Meet Your New Best Friend!</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <nav class="navbar fixed-bottom navbar-dark">
+        <a class="navbar-brand">&copy Bark Finder 2018</a>
+    </nav>
 
 </body>
 <script src="assets/javascript.js"></script>
