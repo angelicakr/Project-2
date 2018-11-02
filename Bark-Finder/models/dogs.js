@@ -18,60 +18,49 @@ module.export = function (sequelize, DataTypes) {
         cats: {
             type: DataTypes.INTEGER,
             allowNull: false,
- 
         },
         exercise: {
             type: DataTypes.INTEGER,
             allowNull: false,
- 
         },
         special: {
             type: DataTypes.INTEGER,
             allowNull: false,
- 
         },
         age: {
             type: DataTypes.INTERGER,
             allowNull: false,
- 
         },
         children: {
             type: DataTypes.INTEGER,
             allowNull: true,
- 
         },
         size: {
             type: DataTypes.INTEGER,
             allowNull: false,
- 
         },
         fur: {
             type: DataTypes.NUMERIC,
             allowNull: false,
- 
         },
         food: {
             type: DataTypes.NUMERIC,
             allowNull: false,
- 
         },
         protective: {
             type: DataTypes.NUMERIC,
             allowNull: false,
- 
         },
         gender: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
- 
         },
         experience: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
- 
         },
     });
- 
+
  
     Dogs.associate = function(models) {
         Dogs.belongsTo(models.adopters, {
@@ -80,6 +69,7 @@ module.export = function (sequelize, DataTypes) {
             }
         });
     };
- 
+
     return Dogs;
- }
+};
+
