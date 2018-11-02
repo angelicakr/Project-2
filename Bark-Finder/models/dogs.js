@@ -1,5 +1,9 @@
 module.export = function (sequelize, DataTypes) {
     var Dogs = sequelize.define("Dogs", {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true
+        },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -7,7 +11,27 @@ module.export = function (sequelize, DataTypes) {
                 len: [1, 50]
             }
         },
-        photo: {
+        breed: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        age: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        gender: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        experience: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        pic: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        profile: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -27,10 +51,6 @@ module.export = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        age: {
-            type: DataTypes.INTERGER,
-            allowNull: false,
-        },
         children: {
             type: DataTypes.INTEGER,
             allowNull: true,
@@ -40,29 +60,26 @@ module.export = function (sequelize, DataTypes) {
             allowNull: false,
         },
         fur: {
-            type: DataTypes.NUMERIC,
+            type: DataTypes.INTERGER,
             allowNull: false,
         },
         food: {
-            type: DataTypes.NUMERIC,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         protective: {
-            type: DataTypes.NUMERIC,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
-        gender: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-        },
+
         experience: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
         },
     });
 
- 
-    Dogs.associate = function(models) {
+
+    Dogs.associate = function (models) {
         Dogs.belongsTo(models.adopters, {
             foreignKey: {
                 allowNull: false
@@ -72,4 +89,3 @@ module.export = function (sequelize, DataTypes) {
 
     return Dogs;
 };
-
