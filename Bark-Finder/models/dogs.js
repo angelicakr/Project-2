@@ -7,7 +7,27 @@ module.export = function (sequelize, DataTypes) {
                 len: [1, 50]
             }
         },
-        photo: {
+        breed: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        age: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        gender: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        experience: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        pic: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        profile: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -25,10 +45,6 @@ module.export = function (sequelize, DataTypes) {
         },
         special: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        age: {
-            type: DataTypes.INTERGER,
             allowNull: false,
         },
         children: {
@@ -51,18 +67,15 @@ module.export = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        gender: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-        },
+
         experience: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
         },
     });
 
- 
-    Dogs.associate = function(models) {
+
+    Dogs.associate = function (models) {
         Dogs.belongsTo(models.adopters, {
             foreignKey: {
                 allowNull: false
@@ -72,4 +85,3 @@ module.export = function (sequelize, DataTypes) {
 
     return Dogs;
 };
-
