@@ -40,15 +40,15 @@ module.export = function (sequelize, DataTypes) {
             allowNull: false,
         },
         fur: {
-            type: DataTypes.NUMERIC,
+            type: DataTypes.INTERGER,
             allowNull: false,
         },
         food: {
-            type: DataTypes.NUMERIC,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         protective: {
-            type: DataTypes.NUMERIC,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         gender: {
