@@ -19,7 +19,7 @@ li {
 }
 /* THIS IS JAMIE's CODE FROM HIS CSS FILE */
 .jumbotron-fluid {
-  background: url('./images/banner.png');
+  background: url('../images/banner.png');
   background-repeat: no-repeat; 
   background-position: center;
   background-attachment: fixed;       
