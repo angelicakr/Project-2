@@ -59,7 +59,7 @@
             </div>
             <!-- Button trigger modal -->
             <div class="col-sm">
-                <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModalLogin">
+                <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal1">
                     Start Quiz
                 </button>
             </div>
@@ -104,18 +104,52 @@
                         <label>
                             <input type="checkbox" checked="checked" name="remember"> Remember me
                         </label>
+                        <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#myModalSignUp" data-dismiss="modal">Sign Up</button>
                     </div>
                     <div class="col-md-6 image">
                         <img class="modal-image w-100" src="./public/assets/images/bernese-puppy.png" alt="">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-next">Login</button>
+                    
+                    <button type="button" class="btn btn-default" data-target="#myModalMember">Login</button>
                 </div>
             </div>
         </div>
     </div>
-
+ <!-- signup model -->
+ <div class="modal fade" id="myModalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign Up Form</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="signup">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="email-input" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="password-input" placeholder="Password">
+                </div>
+                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <span class="sr-only">Error:</span> <span class="msg"></span>
+                </div>
+                <button type="button" class="btn btn-default">Sign Up</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Q1 Modal -->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -585,5 +619,5 @@
 
 </body>
 <script src="./public/assets/js/dogs.js"></script>
-
+<script src="./assets/javascript.js"></script>
 </html>
