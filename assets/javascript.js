@@ -8,3 +8,6 @@ $("div[id^='myModal']").each(function(){
       currentModal.closest("div[id^='myModal']").nextAll("div[id^='myModal']").first().modal('show'); 
     });
 });
+$(window).on("load", function(){
+  $('#myModalLogin').modal('show');
+});
