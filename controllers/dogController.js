@@ -3,11 +3,11 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (dog.js) to use its database functions.
-var dog = require("../models/dog.js");
+var db = require("../models/dogs.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  dog.all(function(data) {
+  db.Dog.all(function(data) {
     var hbsObject = {
       dogs: data
     };
@@ -17,7 +17,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/dogs", function(req, res) {
-  dog.create([
+  db.Dog.create([
     "name", "adopted"
   ], [
     req.body.name, req.body.adopted
@@ -32,7 +32,7 @@ router.put("/api/dogs/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  dog.update({
+  db.Dog.update({
     adopted: req.body.adopted
   }, condition, function(result) {
     if (result.changedRows == 0) {
@@ -47,7 +47,7 @@ router.put("/api/dogs/:id", function(req, res) {
 router.delete("/api/dogs/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  dog.delete(condition, function(result) {
+  db.Dog.delete(condition, function(result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();

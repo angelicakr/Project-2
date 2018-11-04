@@ -95,57 +95,61 @@
                 </div>
                 <div class="modal-body row">
                     <div class="col-md-6 login">
-                        <label for="uname"><b>Username:</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required>
-                        <br>
-                        <label for="psw"><b>Password:</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
-                        <br>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
-                        <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#myModalSignUp" data-dismiss="modal">Sign Up</button>
+                        <form class="loginForm">
+                                <div class="form-group">
+                                  <!-- <label id="emailInput">Email address</label> -->
+                                  <input type="email" class="form-control" id="email-input" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                  <!-- <label id="passwordInput">Password</label> -->
+                                  <input type="password" class="form-control" id="password-input" placeholder="Password">
+                                </div>
+                                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                  <span class="sr-only">Error:</span> <span class="msg"></span>
+                                </div>
+                                <button type="submit" class="btn btn-info">Login</button>
+                              </form>
                     </div>
                     <div class="col-md-6 image">
                         <img class="modal-image w-100" src="./public/assets/images/bernese-puppy.png" alt="">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    
-                    <button type="button" class="btn btn-default" data-target="#myModalMember">Login</button>
+                    <p>Not a member yet?</p>
+                    <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#signUp" data-dismiss="modal">Sign Up</button>
+                    <!-- <button type="button" class="btn btn-default" data-target="#myModalMember">Login</button> -->
                 </div>
             </div>
         </div>
     </div>
  <!-- signup model -->
- <div class="modal fade" id="myModalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" data-controls-modal="signUp" data-backdrop="static" data-keyboard="false" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Sign Up Form</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="myModalSignUp">
               <form class="signup">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="email-input" placeholder="Email">
+                  
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  
                   <input type="password" class="form-control" id="password-input" placeholder="Password">
                 </div>
                 <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                   <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                   <span class="sr-only">Error:</span> <span class="msg"></span>
                 </div>
-                <button type="button" class="btn btn-default">Sign Up</button>
+                <button type="button" class="btn btn-info">Sign Up</button>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <p>Already a member?</p>
+                <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#myModalLogin" data-dismiss="modal">Login</button>
             </div>
           </div>
         </div>
@@ -620,4 +624,9 @@
 </body>
 <script src="./public/assets/js/dogs.js"></script>
 <script src="./public/assets/js/javascript.js"></script>
+<script scr="./public/assets/js/signup.js"></script>
+<script scr="./public/assets/js/login.js"></script>
+<script scr="./public/assets/js/members.js"></script>
+
+
 </html>
