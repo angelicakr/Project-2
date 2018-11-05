@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes){
         },
         //Password cannot be null
         password: {
-            type: DataType.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         }
     });
@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes){
     };
     // Hooks are automatic methods that run during various phases of the User Model lifecycle
     // Used for password hashing
-    User.hook("beforeCreate", function(user){
+    User.addHook("beforeCreate", function(user){
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
     return User;

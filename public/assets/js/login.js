@@ -1,9 +1,9 @@
 //INSIDE PUBLIC FOLDER WITHIN JS FOLDER
 $(document).ready(function(){
     //Variables for user login form
-    var loginForm = $("form.login");
-    var emailInput = $("input#emailInput");
-    var passwordInput = $("input#passwordInput");
+    var loginForm = $(".loginForm");
+    var emailInput = $("#emailInput");
+    var passwordInput = $("#passwordInput");
 
     //validation confirming email/passowrd present
     loginForm.on("submit", function(event){
