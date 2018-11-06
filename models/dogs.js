@@ -1,4 +1,4 @@
-module.export = function (sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Dogs = sequelize.define("Dogs", {
         id: {
             type: DataTypes.INTEGER,
@@ -60,7 +60,7 @@ module.export = function (sequelize, DataTypes) {
             allowNull: false,
         },
         fur: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         food: {
@@ -80,7 +80,7 @@ module.export = function (sequelize, DataTypes) {
 
 
     Dogs.associate = function (models) {
-        Dogs.belongsTo(models.adopters, {
+        Dogs.belongsTo(models.Adopters, {
             foreignKey: {
                 allowNull: false
             }
