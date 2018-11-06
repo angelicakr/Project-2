@@ -8,6 +8,20 @@ var PORT = process.env.PORT || 8888;
 
 var app = express();
 
+// app.get('/', function(req, res) {
+ 
+//     res.send('Welcome to Passport with Sequelize');
+ 
+// });
+ 
+ 
+// app.listen(5000, function(err) {
+ 
+//     if (!err)
+//         console.log("Site is live");
+//     else console.log(err)
+ 
+// });
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 

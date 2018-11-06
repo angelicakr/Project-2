@@ -7,7 +7,7 @@ var isAuthenticated = require("../config/middleware/isAuthenticated.js");
 module.exports = function(app){
     app.get("/", function(req, res){
         if(req.user){
-            res.redirect("/members");
+            res.redirect("/index.html");
         }
         //this would send them to the signup page
         res.sendFile(path.join(__dirname, "../public/signup.html")); // <-- don't have this file
