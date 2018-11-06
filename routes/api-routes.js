@@ -5,7 +5,7 @@ var passport = require("../config/passport");
 
 module.exports = function(app) {
     //Middleware with local strategy, valid login and invalid errors
-    app.post("/api/login", passport.authentication("local"), function(req, res){
+    app.post("/api/login", passport.authenticate("local"), function(req, res){
         //Send res to redirect-using post not get
         res.json("/members");
     });

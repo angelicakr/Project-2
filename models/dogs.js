@@ -1,4 +1,4 @@
-module.export = function (sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Dogs = sequelize.define("Dogs", {
         id: {
             type: DataTypes.INTEGER,
@@ -60,7 +60,7 @@ module.export = function (sequelize, DataTypes) {
             allowNull: false,
         },
         fur: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         food: {
@@ -76,16 +76,16 @@ module.export = function (sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             allowNull: false,
         },
-    });
+    }, {timestamps: false});
 
 
-    Dogs.associate = function (models) {
-        Dogs.belongsTo(models.adopters, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+    // Dogs.associate = function (models) {
+    //     Dogs.belongsTo(models.Adopters, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     });
+    // };
 
     return Dogs;
 };

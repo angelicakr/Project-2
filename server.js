@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var session = require("express-session");
 var passport= require("./config/passport");
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8888;
 
 var app = express();
 
@@ -29,20 +29,20 @@ var routes = require("./controllers/dogController.js");
 app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+// app.listen(PORT, function() {
+//   // Log (server-side) when our server has started
+//   console.log("Server listening on: http://localhost:" + PORT);
+// });
 //for passport login
 var db = require("./models");
 
-var app = express();
+// var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true}));
-app.use(passport.intialize());
+app.use(passport.initialize());
 app.use(passport.session());
 
 require("./routes/html-routes.js")(app);
@@ -50,6 +50,6 @@ require("./routes/api-routes.js")(app);
 
 db.sequelize.sync().then(function(){
     app.listen(PORT, function(){
-        console.log("Listening on port")
+        console.log("Listening on port", PORT)
     })
 })

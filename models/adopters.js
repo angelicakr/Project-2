@@ -1,4 +1,4 @@
-module.export = function (sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Adopters = sequelize.define("Adopters", {
       
         name: {
@@ -23,5 +23,7 @@ module.export = function (sequelize, DataTypes) {
 
             }
         },
+        
     })
+    return Adopters;
 };
