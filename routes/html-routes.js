@@ -23,4 +23,8 @@ module.exports = function(app){
     app.get("/members", isAuthenticated, function(req, res){
         res.sendFile(path.join(__dirname, "../public/members.html")); // <-- don't have this file
     });
+
+    app.get('/test', function(req, res ){
+        res.render('admin');
+    })
 };
