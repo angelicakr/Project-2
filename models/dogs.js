@@ -76,16 +76,16 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             allowNull: false,
         },
-    });
+    }, {timestamps: false});
 
 
-    Dogs.associate = function (models) {
-        Dogs.belongsTo(models.Adopters, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+    // Dogs.associate = function (models) {
+    //     Dogs.belongsTo(models.Adopters, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     });
+    // };
 
     return Dogs;
 };
