@@ -2,13 +2,14 @@
 
 $(document).ready(function () {
     //variables for new member signup form
-    var signUpForm = $("form.signup");
-    var emailInput = $("input#emailInput");
-    var passwordInput = $("input#passwordInput");
+    var signUpForm = $("#signUp");
+    var emailInput = $("#email-input");
+    var passwordInput = $("#password-input");
 
     //Validation for valid input on email/passport
     signUpForm.on("submit", function (event) {
         event.preventDefult();
+        console.log("User Signed up" + emailInput)
         var userData = {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim()
@@ -37,5 +38,6 @@ $(document).ready(function () {
     function handleLoginErr(err) {
         $("#alert .msg").text(err.response.JSON);
         $("alert").fadeIn(500);
+
     }
 });

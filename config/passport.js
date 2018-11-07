@@ -22,7 +22,7 @@ function(email, password, done){
                 message: "Invalid email. Please try again."
             });
         //Wrong password associated with email in db
-        } else if (!dbUser.validPassord(password)){
+        } else if (!dbUser.validPassword(password)){
             return done(null, false, {
                 message:"Invalid password."
             });
