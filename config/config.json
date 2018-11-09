@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "password",
-    "database": "barkfinder_db",
-    "host": "127.0.0.1",
+    "username": "qjurcdcciq0yblgc",
+    "password": "e0wstehbvnelagvf",
+    "database": "ypgck54ufpkcdtbf",
+    "host": "u28rhuskh0x5paau.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
