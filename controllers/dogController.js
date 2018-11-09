@@ -21,6 +21,21 @@ router.get("/", function(req, res) {
   });
 });
 
+router.get("/admin", function(req, res) {
+  db.Dogs.findAll({})
+  .then (function(data) {
+    console.log("data input", data);
+    var hbsObject = {
+      dogs: data
+    };
+    console.log(hbsObject);
+    res.render("admin", hbsObject);
+  })
+  .catch (function(err) {
+    console.log(err);
+  });
+});
+
 router.post("/api/dogs", function(req, res) {
   db.Dog.create([
     "name", "adopted"
