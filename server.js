@@ -1,7 +1,7 @@
 var express = require("express");
 // var bodyParser = require("body-parser");
 // NEEDED FOR PASSPORTjs
-//var session = require("express-session");
+var session = require("express-session");
 var passport = require("./config/passport");
 
 var PORT = process.env.PORT || 8888;
