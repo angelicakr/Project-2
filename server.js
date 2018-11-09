@@ -1,8 +1,8 @@
 var express = require("express");
-var bodyParser = require("body-parser");
+// var bodyParser = require("body-parser");
 // NEEDED FOR PASSPORTjs
 var session = require("express-session");
-var passport= require("./config/passport");
+var passport = require("./config/passport");
 
 var PORT = process.env.PORT || 8888;
 
@@ -23,7 +23,7 @@ var app = express();
  
 // });
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public/views"));
+app.use(express.static("public"));
 
 // parse application/x-www-form-urlencoded
 // app.use(bodyParser.urlencoded({ extended: true }));
@@ -55,13 +55,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true}));
+//app.set('trust proxy', 1); //<--heroku potential fix
+//app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
 
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 
 db.sequelize.sync().then(function(){
     app.listen(PORT, function(){
