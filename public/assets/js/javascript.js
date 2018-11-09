@@ -11,3 +11,4 @@ $("div[id^='myModal']").each(function(){
 $(window).on("load", function(){
   $('#myModalLogin').modal('show');
 });
+

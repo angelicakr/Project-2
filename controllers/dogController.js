@@ -7,13 +7,15 @@ var db = require("../models");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  db.Dogs.findAll({})
-  .then (function(data) {
-    console.log("data input", data);
+  db.Dogs.findAll({}).then (function(data) {
+    // console.log(data);
+    for (var i=0; i<data.length; i++) {
+      // console.log(data[i].dataValues);
+    }
     var hbsObject = {
       dogs: data
     };
-    console.log(hbsObject);
+    // console.log("dog data", hbsObject);
     res.render("index", hbsObject);
   })
   .catch (function(err) {
